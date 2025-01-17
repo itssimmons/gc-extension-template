@@ -1,0 +1,9 @@
+node_modules/
+dist/
+
+dist.zip
+dist.tar.gz
+
+pnpm-lock.yaml
+
+.DS_Store

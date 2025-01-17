@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "name": "Hello World",
+  "author": "author@helloworld.com",
+  "description": "The best extension ever created!",
+  "manifest_version": 3,
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Gemi Slice | Gemini Snippet on Search",
+    "default_popup": "/action/defaultPopup/index.html",
+    "default_icon": {
+      "16": "/favicon.png",
+      "32": "/favicon.png",
+      "48": "/favicon.png",
+      "128": "/favicon.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "./sidePanel/index.html"
+  },
+  "icons": {
+    "16": "/favicon.png",
+    "32": "/favicon.png",
+    "48": "/favicon.png",
+    "128": "/favicon.png"
+  },
+  "background": {
+    "service_worker": "serviceWorker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": ["https://github.com/*/*"],
+      "css": ["./contentScripts/helloWorld/index.css"],
+      "js": [
+        "./components/HelloWorld/index.js",
+        "./contentScripts/helloWorld/index.js"
+      ]
+    }
+  ],
+  "permissions": ["scripting", "activeTab", "sidePanel"],
+  "host_permissions": ["https://*/*", "http://*/*"]
+}

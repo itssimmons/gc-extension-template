@@ -1,0 +1,6 @@
+{
+  "run_at": "document_end",
+  "matches": [
+    "https://github.com/*"
+  ]
+}

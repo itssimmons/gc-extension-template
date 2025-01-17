@@ -1,0 +1,23 @@
+{
+	"projectId": "helloWorld",
+	"manifest_options": {
+		"manifest_version": 3,
+		"name": "Hello World",
+		"author": "author@helloworld.com",
+		"description": "The best extension ever created!"
+	},
+  "sources": {
+    "service_worker": "./src/serviceWorker.ts",
+    "action.default_popup": "./src/action/defaultPopup",
+    "side_panel": "./src/sidePanel",
+    "content_scripts": "./src/contentScripts",
+    "public": "./public",
+    "globals": "./src/globals",
+		"components": "./src/components"
+  },
+	"build": {
+		"watch": true,
+		"compress": false,
+		"outputDir": "./dist"
+	}
+}

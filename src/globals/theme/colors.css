@@ -1,0 +1,32 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --white-hue: 0;
+    --white-sat: 0%;
+    --white-lig: 100%;
+
+    --black-hue: 0;
+    --black-sat: 0%;
+    --black-lig: 0%;
+
+    --deep-purple-hue: 245;
+    --deep-purple-sat: 100%;
+    --deep-purple-lig: 50%;
+
+    /* ==> colors <== */
+    --white: hsl(var(--white-hue), var(--white-sat), var(--white-lig));
+    --black: hsl(var(--black-hue), var(--black-sat), var(--black-lig));
+    --deep-purple: hsl(
+      var(--deep-purple-hue),
+      var(--deep-purple-sat),
+      var(--deep-purple-lig)
+    );
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black-lig: 100%;
+    --light-lig: 0%;
+    --deep-purple: 65%;
+  }
+}
